@@ -13,22 +13,43 @@
 int main() {
 
   FILE *fp = fopen("/home/rishabh/mycode/aoc/2015/input.txt", "r");
-  FILE *T;
   if (fp == NULL){
     printf("Failed to open the FIle\n");
   }
   
   int count = 0;
-  char ch;
-  while((ch = fgetc(fp)) != EOF){
-    printf("%c",ch);
+  int total = 0;
+  int ch;
+  int pos;
+  int ex=0;
+
+  while((ch = (fgetc(fp))) != EOF){
+    char x = (char) ch; // Because fgetc return int 
+
+    if(total == -1){
+      if(!ex){
+        pos = count ;
+        ex++;
+      }
+    }
+
+    if (x == '(' ){
+      total++;
+    }
+    else if (x == ')'){
+      total--;
+    }
     count++;
 
   }
+
   printf("Number of Characters in file : %d \n", count);
-  char s = fgetc(T);
-  printf("%s\n",s);
-  //int s = fgetc(t);
-  //printf("%d \n",s);
+  printf("Number of Floor where Santa is : %d\n", total);
+  printf("First position of character when santa is in basement : %d\n", pos);
+  printf("File Ends here : %d\n",((fgetc(fp))));
+   // TODO Solve by using the dynamic array 
+  // I will return for refactoring the code more
+
   return 0;
 }
+
