@@ -5,10 +5,7 @@
 
 // advent of code puzzle 1 of 2015
 // tried on 2023-06-29
-
-// Make a Function to count the 
-// file characters
-
+// Solved again 2023-08-24 16:15
 
 int main() {
 
