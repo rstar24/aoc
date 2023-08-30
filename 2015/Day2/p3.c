@@ -6,7 +6,7 @@
 int main(int argc, char *argv[])
 {
   //opening The file
-  FILE *fp = fopen("/home/rishabh/mycode/aoc/2015/p3-inputc.txt","r");
+  FILE *fp = fopen("/home/rishabh/mycode/aoc/2015/Day2/p3-inputc.txt","r");
   if(fp == NULL){
     printf("There was a error opening the file\n");
     exit(1);

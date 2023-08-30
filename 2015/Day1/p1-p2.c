@@ -9,7 +9,7 @@
 
 int main() {
 
-  FILE *fp = fopen("/home/rishabh/mycode/aoc/2015/input.txt", "r");
+  FILE *fp = fopen("/home/rishabh/mycode/aoc/2015/Day1/input.txt", "r");
   if (fp == NULL){
     printf("Failed to open the FIle\n");
   }
