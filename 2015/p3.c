@@ -69,7 +69,7 @@ int main(int argc, char *argv[])
     printf("%ld\n",area[i]);
   }
   
-  for(int i =0; i< 3000; i++){
+  for(int i =0; i< 1000; i++){
     total =total + area[i] ;
   }
   
