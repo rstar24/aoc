@@ -1,7 +1,7 @@
 # Advent of Code
 
 > I am not going to answer people why I am 
-> making the solution the C it is a whim 
+> making the solution in C 
 > and As I evolve with other programming languages 
 > I may or may not try to solve it using C but for now 
 > C is the ray of sunshine for me 
