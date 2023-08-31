@@ -3,6 +3,9 @@
 #include <string.h>
 #include <ctype.h>
 
+long ribln(long a,long b, long c);
+long volume(long a,long b,long c);
+
 int main(int argc, char *argv[])
 {
   //opening The file
@@ -27,7 +30,13 @@ int main(int argc, char *argv[])
   // of the cubes
   long int dim[3000];
   long int area[1000];
+  long int l[1000];
+  long int w[1000];
+  long int h[1000];
+  long long int rbl[1000];
   long int total;
+  long long int trb;
+  long long int trb2;
   long int lw;
   long int wh;
   long int hl;
@@ -51,12 +60,19 @@ int main(int argc, char *argv[])
     }
   } while(!feof(fp));
   //to see all the dimensions
-  /*
-  for(int i= 0; i < 3000; i++){
-    printf("%ld\n",dim[i]);
+  //For the part two of the puzzle
+  for (int i=0; i< 1000; i++){
+    l[i] = (dim[i*3]);
+    w[i] = (dim[(i*3)+1]);
+    h[i] = (dim[(i*3)+2]);
   }
-  */
-  
+  //calculate the ribbon length
+  for(int i=0; i< 1000;i++){
+    long long int x = ribln(l[i],w[i],h[i]);
+    long long int y = volume(l[i],w[i],h[i]);
+    rbl[i] =  x+y;
+  }
+
   for (int i=0;i< 1000;i++) {
     long int lw = (dim[(i*3)]) * (dim[((i*3)+1)]);
     long int wh = (dim[(i*3)+1]) * (dim[((i*3)+2)]);
@@ -65,16 +81,35 @@ int main(int argc, char *argv[])
     long int shorta = (((lw>wh) ? wh:lw) > hl ? hl : ((lw>wh) ? wh:lw)); 
     area[i] = sa + shorta;
   }
-  for(int i=0; i<1000;i++){
-    printf("%ld\n",area[i]);
-  }
-  
   for(int i =0; i< 1000; i++){
     total =total + area[i] ;
   }
-  
-  printf("This is number of cubes :%d\n",i);
+  int kk=0;
+  for (int i=0 ; i<1000; i++){
+    kk = (int) (kk + rbl[i]);
+  }
+  printf("This is number of cubes :%d\n",1000);
   printf("The total area of paper require : %ld\n",total);
+  printf("The length of ribbon : %d\n",kk);
   system("fortune | lolcat");
   return EXIT_SUCCESS;
+}
+
+long int ribln(long int a, long int b , long int c){
+  long int x = 0;
+  if (((a>=b) && (a>=c))){
+    x=b+b+c+c;
+  }
+  else if (((b>=a) && (b>=c))){
+    x=a+a+c+c;
+  }
+  else if (((c>=a) && (c>=b))){
+    x=a+a+b+b;
+  }
+  return x;
+}
+
+long int volume(long int a, long int b , long int c){
+  long int z = a*b*c;
+  return z;
 }
