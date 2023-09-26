@@ -5,6 +5,8 @@ p3:
 	# This is a comment in makefile rule 
 p4:
 	cd ~/mycode/aoc/output/  && g++ ~/mycode/aoc/2015/Day3/p4.cpp -o p4 && ./p4 
+p5:
+	cd ~/mycode/aoc/output/  && g++ ~/mycode/aoc/2015/Day3/p5.cpp -o p5 && ./p5 
 
 file0.txt:
 	echo "I will make file0.txt";

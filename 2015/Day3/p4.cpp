@@ -9,6 +9,7 @@ using namespace std;
 int main(){
     //Making a grid of 16000 x 1600
     vector<vector<int>> grid(MAX_LENGTH, vector<int>(MAX_WIDTH,0));
+    //Present is delivered at starting house 
     grid[ORIGIN][ORIGIN] = 1;
     cout << "length of grid : " << grid.size() << "\n";
     cout << "width of grid : " << grid[0].size() << "\n";
@@ -48,7 +49,8 @@ int main(){
             grid[loc_x][loc_y+1]++;
             loc_y++;
         }
-        else if (ch == 'v'){
+        else if (ch 
+        == 'v'){
             grid[loc_x][loc_y-1]++;
             loc_y--;
         }
