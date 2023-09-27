@@ -7,11 +7,6 @@ p4:
 	cd ~/mycode/aoc/output/  && g++ ~/mycode/aoc/2015/Day3/p4.cpp -o p4 && ./p4 
 p5:
 	cd ~/mycode/aoc/output/  && g++ ~/mycode/aoc/2015/Day3/p5.cpp -o p5 && ./p5 
-
-file0.txt:
-	echo "I will make file0.txt";
-
-file1.txt: file0.txt
-	echo "THe file0 has gone through some changes";
-	echo "Making file1 according to those changes";
+p6:
+	cd ~/mycode/aoc/output/  && g++ ~/mycode/aoc/2015/Day4/p6.cpp ~/mycode/aoc/2015/Day4/md5.cpp  -o p6 && ./p6 | lolcat
 
