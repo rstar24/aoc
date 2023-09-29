@@ -2,6 +2,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+//I have tampered the input I will rewrite 
+// after completing the all the 50 puzzles
+
 
 long ribln(long a, long b, long c);
 long volume(long a, long b, long c);

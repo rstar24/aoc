@@ -2,7 +2,7 @@
 #include </home/rishabh/mycode/aoc/2015/Day4/md5.h>
 using namespace std;
 
-#define MAX_SIZE 1000000
+#define MAX_SIZE 10000000
 //Copied the md5 checksum function from the zedwood.com
 
 int main(int argc, char *argv[]) {
@@ -40,7 +40,8 @@ int main(int argc, char *argv[]) {
         (ss2[1]=='0') &&
         (ss2[2]=='0') &&
         (ss2[3]=='0') &&
-        (ss2[4]=='0') 
+        (ss2[4]=='0') &&
+        (ss2[5]=='0')
       ){
         flag = 1;
       }
@@ -52,7 +53,6 @@ int main(int argc, char *argv[]) {
     }
     k++;
   }
-  
   cout << endl;
 
   return 0;
