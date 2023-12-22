@@ -1,5 +1,5 @@
 testc:
-	cd ~/mycode/aoc/output/  && gcc ~/mycode/aoc/2015/Day1/testc.c -o testc && ./testc 
+	cd ~/mycode/aoc/output/  && gcc ~/mycode/aoc/2015/Day2/testc.c -o testc && ./testc 
 test:
 	cd ~/mycode/aoc/output/  && g++ ~/mycode/aoc/2015/Day5/test.cpp -o test && ./test | lolcat
 p1-p2:
